@@ -25,9 +25,6 @@ public:
 	void GameBoardDisplay();//accessor function to display the current game board
 
 	
-							// accessor function to check if the current board has a winner. (if winner, state and end game)
-	//function to track the status of the board. possibly in an array.
-	//function that prompts players to make a move
 
 };
 #endif
