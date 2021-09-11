@@ -11,5 +11,4 @@ public:
 	void Player2Turn();
 	void SwitchPlayer();
 };
-
 #endif
