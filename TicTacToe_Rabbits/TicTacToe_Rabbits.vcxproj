@@ -147,11 +147,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Documentation.cpp" />
+    <ClCompile Include="GameBoard.cpp" />
+    <ClCompile Include="GameFunctions.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="TicTacToe_Rabbits.cpp" />
+    <ClCompile Include="PlayerFunctions.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="tictactoe.h" />
+    <ClInclude Include="Documentation.h" />
+    <ClInclude Include="GameBoard.h" />
+    <ClInclude Include="GameFunctions.h" />
+    <ClInclude Include="PlayerFunctions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
