@@ -6,7 +6,10 @@ using namespace std;
 class GameBoard
 {
 private:
+	char gameBoardArray[8];
 public:
+
+	GameBoard();
 	void GameBoardDisplay();
 	void GameBoardUpdate();
 	void GameBoardReset();
