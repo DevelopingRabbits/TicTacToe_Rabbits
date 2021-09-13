@@ -2,6 +2,10 @@
 #include <iostream>
 
 // Defining functions created in the .h file
+Documentation::Documentation()
+{
+
+}
 
 void Documentation::MainMenu() {
 	// int choice is declared in Header File.

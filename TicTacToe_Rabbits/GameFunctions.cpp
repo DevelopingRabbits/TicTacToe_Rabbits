@@ -1,6 +1,10 @@
 #include "GameFunctions.h"
 #include <iostream>
 
+GameFunctions::GameFunctions()
+{
+
+}
 
 void GameFunctions::StartGame() {
 };
