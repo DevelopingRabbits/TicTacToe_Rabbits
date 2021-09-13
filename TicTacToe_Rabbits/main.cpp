@@ -7,8 +7,13 @@ using namespace std;
 
 int main()
 {	
-	Documentation d;
-	d.Welcome();
-	//test
+	Documentation documentation;     // Create Documentation Object
+	GameBoard gameBoard;             // Create Game Board Object
+	GameFunctions gameFunctions;     // Create Game Functions Object
+	PlayerFunctions playerFunctions; // Create Player Functions Object
+
+
+	documentation.Welcome();     // Display Welcome Message To User
+	documentation.MainMenu();    // Display MainMenu to User
 	return 0;
 }

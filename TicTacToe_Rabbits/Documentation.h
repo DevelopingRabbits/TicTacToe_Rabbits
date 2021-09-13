@@ -7,10 +7,14 @@ class Documentation
 {
 private:
 public:
+	// Variables
+	int choice;
+
+	// Functions
 	void MainMenu();
 	void Welcome();
 	void Help();
-	void Quit();
+	int Quit();
 };
 
 #endif
