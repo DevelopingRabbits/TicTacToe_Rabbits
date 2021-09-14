@@ -15,10 +15,10 @@ public:
 	int choice;
 
 	// Functions
-	bool MainMenu();
-	void Welcome();
-	void Help();
-	int Quit();
+	bool MainMenu();    // A switch statement that allows the user to select Start Game, Instructions or Quit.
+	void Welcome();     // Welcome Message at beginning of program start.
+	void Help();        // Instruction Documentation at customer's request.
+	int Quit();         // Quit the program.
 };
 
 #endif
