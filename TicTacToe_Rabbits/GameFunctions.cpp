@@ -18,10 +18,20 @@ void GameFunctions::StartGame(bool startGame) {
 					player1Choice = playerFunctions.Player1Turn();
 					gameBoard.GameBoardUpdate(player1Symbol, player1Choice);
 					gameBoard.GameBoardDisplay();
+					int win=playerFunctions.CheckWin();
+					if (win == 1)
+					{
+						cout << "player 1 win";
+					}
 
 					player2Choice = playerFunctions.Player2Turn();
 					gameBoard.GameBoardUpdate(player2Symbol, player2Choice);
 					gameBoard.GameBoardDisplay();
+					win = playerFunctions.CheckWin();
+					if (win == 2)
+					{
+						cout << "player 2 win";
+					}
 
 				} while (startGame == true);
 				//gameBoard.GameBoardDisplay();
@@ -34,10 +44,20 @@ void GameFunctions::StartGame(bool startGame) {
 					player2Choice = playerFunctions.Player2Turn();
 					gameBoard.GameBoardUpdate(player2Symbol, player2Choice);
 					gameBoard.GameBoardDisplay();
+					int win = playerFunctions.CheckWin();
+					if (win == 2)
+					{
+						cout << "player 2 win";
+					}
 
 					player1Choice = playerFunctions.Player1Turn();
 					gameBoard.GameBoardUpdate(player1Symbol, player1Choice);
 					gameBoard.GameBoardDisplay();
+					win = playerFunctions.CheckWin();
+					if (win == 1)
+					{
+						cout << "player 1 win";
+					}
 
 				} while (startGame == true);
 

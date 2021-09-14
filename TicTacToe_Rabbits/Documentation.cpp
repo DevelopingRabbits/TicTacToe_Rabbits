@@ -59,8 +59,57 @@ void Documentation::Welcome() {
 /// </summary>
 
 void Documentation::Help() {
-	std::cout << "This is a two player game. Player 1 is 'X' and Player 2 is 'O'\n";
 	//explain how turns will be made (example: spaces on the grid are represnted by numbers 1 to 9)
+	std::cout << "This is a two player game. Player 1 is 'X' and Player 2 is 'O'\n";
+	std::cout << "In order to select a spot on the board, input a number 1-9 to corraspond to the spaces on the board: " << std::endl;
+	
+	int gameBoardArrayHelp[9];
+	
+	for (int x = 0; x < 9; x++)//reset the array to blank spaces
+	{
+		gameBoardArrayHelp[x] = x+1;
+	}
+
+	cout << "\n\n";
+	std::cout << "   ";
+	for (int x = 0; x < 3; x++)//display the first row of the tictactoe gameboard
+	{
+		std::cout << gameBoardArrayHelp[x];
+		if (x < 2)//print out the first two bars in the tictactoe game board
+		{
+			cout << " | ";
+		}
+
+	}
+	//formatting for the board to display correctly in the console
+	std::cout << std::endl;
+	std::cout << "  ";
+	std::cout << "------------" << std::endl;
+	std::cout << "   ";
+	for (int x = 3; x < 6; x++)//display the second row of the tictactoe gameboard
+	{
+		std::cout << gameBoardArrayHelp[x];
+		if (x < 5)//print out the second two bars in the tictactoe game board
+		{
+			cout << " | ";
+		}
+	}
+	//formatting for the board to display correctly in the console
+	std::cout << std::endl;
+	std::cout << "  ";
+	std::cout << "------------" << std::endl;
+	std::cout << "   ";
+	for (int x = 6; x < 9; x++)//display the third row of the tictactoe gameboard
+	{
+		std::cout << gameBoardArrayHelp[x];
+		if (x < 8)
+		{
+			cout << " | ";//print out the third two bars in the tictactoe game board
+		}
+	}
+
+	std::cout << std::endl;
+	return;
 };
 
 /// <summary>

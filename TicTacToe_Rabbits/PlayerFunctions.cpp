@@ -1,12 +1,22 @@
 #include "PlayerFunctions.h"
 #include <iostream>
 
+PlayerFunctions::PlayerFunctions()
+{
+	for (int i = 0; i < 9; i++) {
+		player1Tracker[i] = -1;
+	}
 
+	for (int i = 0; i < 9; i++) {
+		player2Tracker[i] = -1;
+	}
+}
 
 void PlayerFunctions::playerFunctionsInit() {
-	for (int i = 0; i <= 9; i++) {
+	for (int i = 0; i < 9; i++) {
 		gameBoardArray[i] = ' ';
 	}
+
 };
 int PlayerFunctions::Player1Turn() {
 	bool valid = false;
@@ -46,8 +56,12 @@ int PlayerFunctions::Player1Turn() {
 		gameBoardArray[player1ChoiceTemp] = 'x';
 		player1Choice[player1TurnCount] = player1ChoiceTemp;
 		player1TurnCount++;
+
+		player1Tracker[player1ChoiceTemp] = 1;
+
 		return player1Choice[player1TurnCount - 1];
 	}
+
 
 };
 
@@ -89,6 +103,84 @@ loop:
 		gameBoardArray[player2ChoiceTemp] = 'o';
 		player2Choice[player2TurnCount] = player2ChoiceTemp;
 		player2TurnCount++;
+
+		player2Tracker[player2ChoiceTemp] = 1;
+
 		return player2Choice[player2TurnCount - 1];
 	}
+
+	
 };
+
+int PlayerFunctions::CheckWin()
+{
+	for (int i = 0; i < 8; i++) {
+		cout <<this-> player1Tracker[i] << endl;
+	}
+	cout << endl;
+
+	for (int i = 0; i < 8; i++) {
+		cout << this-> player2Tracker[i] << endl;
+	}
+	//check for winners on rows
+	for (int i = 0; i < 9; i +=3)
+	{
+		
+		if (this->player1Tracker[i] == 1 && this->player1Tracker[i + 1] == 1 && this->player1Tracker[i + 2] == 1)
+		{
+			
+			return 1;//player 1 wins on the row
+		}
+		else if (this->player2Tracker[i] == 1 && this->player2Tracker[i + 1] == 1 && this->player2Tracker[i + 2] == 1)
+		{
+			
+			return 2;//player 2 wins on the row
+		}
+	}
+
+	//check for winners on columns
+	for (int i = 0; i < 3; i++)
+	{
+		
+
+		//cout << "checking col...";
+		if (this->player1Tracker[i] == 1 && this->player1Tracker[i + 3] == 1 && this->player1Tracker[i + 6] == 1)
+		{
+			
+			return 1;//player 1 wins on the row
+		}
+		else if (this->player2Tracker[i] == 1 && this->player2Tracker[i + 3] == 1 && this->player2Tracker[i + 6] == 1)
+		{
+			
+			return 2;//player 2 wins on the row
+		}
+	}
+
+	
+		if (this->player1Tracker[0] == 1 && this->player1Tracker[4] == 1 && this->player1Tracker[8] == 1)
+		{
+			
+			return 1;//player 1 wins on the row
+		}
+
+		else if (this->player1Tracker[2] == 1 && this->player1Tracker[4] == 1 && this->player1Tracker[6] == 1)
+		{
+
+			return 1;//player 1 wins on the row
+		}
+
+		else if (this->player2Tracker[0] == 1 && this->player2Tracker[4] == 1 && this->player2Tracker[8] == 1)
+		{
+			
+			return 2;//player 2 wins on the row
+		}
+
+		else if (this->player2Tracker[2] == 1 && this->player2Tracker[4] == 1 && this->player2Tracker[6] == 1)
+		{
+
+			return 2;//player 2 wins on the row
+		}
+	
+	//check for winners on diagonals
+
+}

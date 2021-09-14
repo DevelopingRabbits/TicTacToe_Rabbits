@@ -10,7 +10,7 @@ class GameBoard
 private:
 
 public:
-	char gameBoardArray[8];
+	char gameBoardArray[9];
 
 	void GameBoardInit();
 	void GameBoardDisplay();

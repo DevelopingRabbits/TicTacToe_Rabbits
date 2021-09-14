@@ -11,6 +11,7 @@ class PlayerFunctions {
 private:
 	
 public:
+	PlayerFunctions();
 	GameBoard gameBoard;
 	int player1Choice[8];
 	int player1ChoiceTemp;
@@ -18,11 +19,17 @@ public:
 	int player2Choice[8];
 	int player2TurnCount = 0;
 	int player2ChoiceTemp;
-	char gameBoardArray[8];
+	char gameBoardArray[9];
+
+
+	int player1Tracker[9];
+	int player2Tracker[9];
+
 
 	void playerFunctionsInit();
 	int Player1Turn();
 	int Player2Turn();
+	int CheckWin();
 };
 #endif
 
