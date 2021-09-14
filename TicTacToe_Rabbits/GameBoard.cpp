@@ -7,7 +7,6 @@ void GameBoard::GameBoardInit()
 	{
 		gameBoardArray[x] = ' ';
 	}
-
 };
 
 void GameBoard::GameBoardDisplay() 

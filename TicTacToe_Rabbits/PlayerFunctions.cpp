@@ -3,8 +3,6 @@
 #include <iostream>
 
 
-
-
 int PlayerFunctions::Player1Turn() {
 	bool valid = false;
 	loop:
