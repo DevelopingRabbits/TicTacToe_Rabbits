@@ -8,12 +8,18 @@ void GameFunctions::StartGame(bool startGame) {
 	do {
 		if (startGame == true) {
 			startingPlayer = SelectStartingPlayer();
+			gameBoard.GameBoardInit();
 			if (startingPlayer == 1)
 			{
 				cout << "Starting player is Player 1";
 				do {
-					playerFunctions.Player1Turn();
-					playerFunctions.Player2Turn();
+					player1Choice = playerFunctions.Player1Turn();
+					gameBoard.GameBoardUpdate(player1Symbol, player1Choice);
+					gameBoard.GameBoardDisplay();
+
+					player2Choice = playerFunctions.Player2Turn();
+					gameBoard.GameBoardUpdate(player2Symbol, player2Choice);
+					gameBoard.GameBoardDisplay();
 
 				} while (startGame == true);
 				//gameBoard.GameBoardDisplay();
@@ -23,8 +29,13 @@ void GameFunctions::StartGame(bool startGame) {
 			else {
 				cout << "Starting player is Player 2";
 				do {
-					playerFunctions.Player2Turn();
-					playerFunctions.Player1Turn();
+					player2Choice = playerFunctions.Player2Turn();
+					gameBoard.GameBoardUpdate(player2Symbol, player2Choice);
+					gameBoard.GameBoardDisplay();
+
+					player1Choice = playerFunctions.Player1Turn();
+					gameBoard.GameBoardUpdate(player1Symbol, player1Choice);
+					gameBoard.GameBoardDisplay();
 
 				} while (startGame == true);
 

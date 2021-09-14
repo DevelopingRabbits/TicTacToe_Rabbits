@@ -1,11 +1,11 @@
 #include "GameBoard.h"
 #include <iostream>
 
-GameBoard::GameBoard()
+void GameBoard::GameBoardInit()
 {
 	for (int x = 0; x < 9; x++)//reset the array to blank spaces
 	{
-		this->gameBoardArray[x] = ' ';
+		gameBoardArray[x] = ' ';
 	}
 
 };
@@ -53,7 +53,7 @@ void GameBoard::GameBoardDisplay()
 	std::cout << std::endl;
 	
 };
-void GameBoard::GameBoardUpdate(char input,int space) {
+void GameBoard::GameBoardUpdate(char input, int space) {
 
 	gameBoardArray[space] = input;//set the selected grid space to the current players marker
 
