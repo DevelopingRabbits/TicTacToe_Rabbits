@@ -29,6 +29,7 @@ int PlayerFunctions::Player1Turn() {
 
 	if (player1ChoiceTemp < 0 || player1ChoiceTemp > 10)//test to see if the input that has been validated to be a number is either 1 or 2
 	{
+		cout << "Invalid Input..." << endl;
 		goto loop;//if the number is not 1 or 2, go back to attempting to get an input
 	}
 	else
@@ -65,6 +66,7 @@ loop:
 
 	if (player2ChoiceTemp < 0 || player2ChoiceTemp > 10)//test to see if the input that has been validated to be a number is either 1 or 2
 	{
+		cout << "Invalid Input..." << endl;
 		goto loop;//if the number is not 1 or 2, go back to attempting to get an input
 	}
 	else
