@@ -12,8 +12,10 @@ int main()
 	GameFunctions gameFunctions;     // Create Game Functions Object
 	PlayerFunctions playerFunctions; // Create Player Functions Object
 
-
+	gameBoard.GameBoardDisplay();
+	gameBoard.GameBoardReset();
 	documentation.Welcome();     // Display Welcome Message To User
 	documentation.MainMenu();    // Display MainMenu to User
+
 	return 0;
 }

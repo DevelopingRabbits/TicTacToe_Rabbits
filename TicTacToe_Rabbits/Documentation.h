@@ -11,7 +11,7 @@ public:
 	int choice;
 
 	// Functions
-	void MainMenu();
+	void MainMenu(); // Displays the Main Menu
 	void Welcome();
 	void Help();
 	int Quit();

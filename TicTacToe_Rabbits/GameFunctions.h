@@ -10,7 +10,5 @@ public:
 	void StartGame();
 	void SelectStartingPlayer();
 	void GameOver();
-
 };
-
 #endif
