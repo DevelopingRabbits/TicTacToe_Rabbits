@@ -13,7 +13,7 @@ private:
 
 public:
 	char gameBoardArray[8];
-	
+	GameBoard();
 	void GameBoardDisplay();
 	void GameBoardUpdate(char input,int space);
 	void GameBoardReset();

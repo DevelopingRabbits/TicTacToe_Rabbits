@@ -1,6 +1,14 @@
 #include "GameBoard.h"
 #include <iostream>
 
+GameBoard::GameBoard()
+{
+for (int x = 0; x < 9; x++)//reset the array to blank spaces
+{
+	this->gameBoardArray[x] = ' ';
+}
+
+};
 
 void GameBoard::GameBoardDisplay() 
 {
