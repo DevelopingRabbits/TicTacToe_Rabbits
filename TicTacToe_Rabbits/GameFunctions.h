@@ -12,8 +12,12 @@ class GameFunctions {
 private:
 
 public:
+	char player1Symbol = 'x';
+	int player1Choice;
+	char player2Symbol = 'o';
+	int player2Choice;
 	Documentation documentation;
-	//GameBoard gameBoard;
+	GameBoard gameBoard;
 	PlayerFunctions playerFunctions;
 
 	bool rematch;

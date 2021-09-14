@@ -8,12 +8,11 @@ class GameBoard
 {
 	
 private:
-	
-	friend class PlayerFunctions;
 
 public:
 	char gameBoardArray[8];
-	GameBoard();
+
+	void GameBoardInit();
 	void GameBoardDisplay();
 	void GameBoardUpdate(char input,int space);
 	void GameBoardReset();

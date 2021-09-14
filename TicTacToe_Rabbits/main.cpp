@@ -9,9 +9,9 @@ int main()
 {	
 	
 	Documentation documentation;     // Create Documentation Object
-	GameBoard gameBoard;             // Create Game Board Object
 	GameFunctions gameFunctions;     // Create Game Functions Object
 	PlayerFunctions playerFunctions; // Create Player Functions Object
+
 
 	bool startGame = false;
 	documentation.Welcome();     // Display Welcome Message To User
