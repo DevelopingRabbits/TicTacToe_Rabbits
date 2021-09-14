@@ -7,8 +7,10 @@
 void GameFunctions::StartGame(bool startGame) {
 	do {
 		if (startGame == true) {
+			playerFunctions.playerFunctionsInit();
 			startingPlayer = SelectStartingPlayer();
 			gameBoard.GameBoardInit();
+
 			if (startingPlayer == 1)
 			{
 				cout << "Starting player is Player 1";
