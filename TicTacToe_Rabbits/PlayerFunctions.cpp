@@ -1,11 +1,19 @@
 #include "PlayerFunctions.h"
+#include "GameBoard.h"
 #include <iostream>
 
-void PlayerFunctions::Player1Turn() {
 
+PlayerFunctions::PlayerFunctions()
+{
+	
+
+	
+}
+void PlayerFunctions::Player1Turn(int input) {
+	
 };
 
-void PlayerFunctions::Player2Turn() {
+void PlayerFunctions::Player2Turn(int input) {
 
 };
 

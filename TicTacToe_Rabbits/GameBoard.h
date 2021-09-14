@@ -3,15 +3,21 @@
 #include<iostream>
 using namespace std;
 
+
 class GameBoard
 {
+	
 private:
+	
+	friend class PlayerFunctions;
 	char gameBoardArray[8];
-public:
 
-	GameBoard();
+public:
+	
+	GameBoard();//default constructor
+	
 	void GameBoardDisplay();
-	void GameBoardUpdate();
+	void GameBoardUpdate(char input,int space);
 	void GameBoardReset();
 	//function that prompts players to make a move
 };
