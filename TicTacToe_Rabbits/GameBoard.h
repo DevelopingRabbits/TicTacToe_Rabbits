@@ -10,11 +10,9 @@ class GameBoard
 private:
 	
 	friend class PlayerFunctions;
-	char gameBoardArray[8];
 
 public:
-	
-	GameBoard();//default constructor
+	char gameBoardArray[8];
 	
 	void GameBoardDisplay();
 	void GameBoardUpdate(char input,int space);

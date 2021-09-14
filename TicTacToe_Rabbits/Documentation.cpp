@@ -2,14 +2,6 @@
 #include "GameFunctions.h"
 #include <iostream>
 
-GameFunctions gameFunctions
-;
-// Defining functions created in the .h file
-Documentation::Documentation()
-{
-
-}
-
 bool Documentation::MainMenu() {
 	// int choice is declared in Header File.
 

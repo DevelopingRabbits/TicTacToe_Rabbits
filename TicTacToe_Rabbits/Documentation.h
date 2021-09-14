@@ -15,7 +15,6 @@ public:
 	int choice;
 
 	// Functions
-	Documentation();//default contructor
 	bool MainMenu();
 	void Welcome();
 	void Help();

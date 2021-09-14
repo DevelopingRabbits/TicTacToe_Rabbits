@@ -1,22 +1,24 @@
 #ifndef PlayerFunctions_H
 #define PlayerFunctions_H
 #include<iostream>
+#include <array>
+#include "GameBoard.h"
 
 
 using namespace std;
-
-class GameBoard;
 
 class PlayerFunctions {
 
 private:
 	
 public:
-	PlayerFunctions();//default constructor
+	GameBoard gameBoard;
+	int player1Choice[8];
+	int player1TurnCount = 0;
+	int player2Choice[8];
+	int player2TurnCount = 0;
 
-
-	void Player1Turn(int input);
-	void Player2Turn(int input);
-	void SwitchPlayer();
+	int Player1Turn();
+	int Player2Turn();
 };
 #endif

@@ -1,17 +1,10 @@
 #include "GameBoard.h"
 #include <iostream>
 
-GameBoard::GameBoard()//default constructor
-{
-	for (int x=0;x<9;x++)//initialized an array of size 8 to store values for the 9 spaces on the tictactoe game board
-	{
-		gameBoardArray[x] = ' ';
-	}
-	
-};
 
 void GameBoard::GameBoardDisplay() 
 {
+	cout << "\n\n";
 	std::cout << "   ";
 	for (int x = 0; x < 3; x++)//display the first row of the tictactoe gameboard
 	{
@@ -61,7 +54,7 @@ void GameBoard::GameBoardReset()
 {
 	for (int x = 0; x < 9; x++)//reset the array to blank spaces
 	{
-		gameBoardArray[x] = ' ';
+		this->gameBoardArray[x] = ' ';
 	}
 	
 };

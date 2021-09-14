@@ -15,6 +15,6 @@ int main()
 
 	bool startGame = false;
 	documentation.Welcome();     // Display Welcome Message To User
-	documentation.MainMenu();    // Display MainMenu to User
+	gameFunctions.StartGame(documentation.MainMenu());    // Display MainMenu to User
 	return 0;
 }
