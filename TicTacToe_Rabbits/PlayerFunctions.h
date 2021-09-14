@@ -13,10 +13,10 @@ private:
 public:
 	PlayerFunctions();
 	GameBoard gameBoard;
-	int player1Choice[8];
+	int player1Choice[9];
 	int player1ChoiceTemp;
 	int player1TurnCount = 0;
-	int player2Choice[8];
+	int player2Choice[9];
 	int player2TurnCount = 0;
 	int player2ChoiceTemp;
 	char gameBoardArray[9];

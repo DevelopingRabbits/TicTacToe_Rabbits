@@ -1,22 +1,26 @@
 #include "PlayerFunctions.h"
 #include <iostream>
 
-PlayerFunctions::PlayerFunctions()
+PlayerFunctions::PlayerFunctions() //Default Constructor
 {
 	for (int i = 0; i < 9; i++) {
 		player1Tracker[i] = -1;
-	}
-
-	for (int i = 0; i < 9; i++) {
 		player2Tracker[i] = -1;
+		player2Choice[i] = ' ';
+		player1Choice[i] = ' ';
+		gameBoardArray[i] = ' ';
 	}
+	player1ChoiceTemp = -1;
+	player2ChoiceTemp = -1;
 }
 
+// Initialize all arrays for a new game. This will be important for a rematch feature.
 void PlayerFunctions::playerFunctionsInit() {
 	for (int i = 0; i < 9; i++) {
 		gameBoardArray[i] = ' ';
+		player1Tracker[i] = -1;
+		player2Tracker[i] = -1;
 	}
-
 };
 int PlayerFunctions::Player1Turn() {
 	bool valid = false;
@@ -114,20 +118,25 @@ loop:
 
 int PlayerFunctions::CheckWin()
 {
-	// DEBUGGING PURPOSES
-	//for (int i = 0; i < 8; i++) {
-	//	cout <<this-> player1Tracker[i] << endl;
-	//}
-	//cout << endl;
+	/* For Debugging Purposes
+	for (int i = 0; i < 8; i++) {
+		cout <<this-> player1Tracker[i] << endl;
+	}
+	cout << endl;
 
-	//for (int i = 0; i < 8; i++) {
-	//	cout << this-> player2Tracker[i] << endl;
-	//}
-	// DEBUGGING PURPOSES
+	for (int i = 0; i < 8; i++) {
+		cout << this-> player2Tracker[i] << endl;
+	}
+	For Debugging Purposes*/
 
 
+	/*
+		This function checks both player's arrays and determines if they have a combination that satisfies 1 of 8 different
+		combinations of TicTacToe.
+	*/
 
-	//check for winners on rows
+
+	// Check for winners on rows
 	for (int i = 0; i < 9; i +=3)
 	{
 		
@@ -143,7 +152,7 @@ int PlayerFunctions::CheckWin()
 		}
 	}
 
-	//check for winners on columns
+	// Check for winners on columns
 	for (int i = 0; i < 3; i++)
 	{
 		

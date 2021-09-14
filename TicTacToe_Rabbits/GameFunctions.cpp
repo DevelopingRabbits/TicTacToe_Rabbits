@@ -23,6 +23,7 @@ void GameFunctions::StartGame(bool startGame) {
 					if (win == 1)
 					{
 						cout << "*** Player 1 Wins! ***";
+						documentation.Quit();
 						break;
 					}
 
@@ -33,12 +34,13 @@ void GameFunctions::StartGame(bool startGame) {
 					if (win == 2)
 					{
 						cout << "*** Player 2 Wins! ***";
+						documentation.Quit();
 						break;
 					}
 
 				} while (startGame == true);
 				//gameBoard.GameBoardDisplay();
-				rematch = this->GameOver();
+				//rematch = this->GameOver();
 
 			}
 			else {
@@ -52,6 +54,7 @@ void GameFunctions::StartGame(bool startGame) {
 					if (win == 2)
 					{
 						cout << "*** Player 2 Wins! ***";
+						documentation.Quit();
 						break;
 					}
 
@@ -62,13 +65,14 @@ void GameFunctions::StartGame(bool startGame) {
 					if (win == 1)
 					{
 						cout << "*** Player 1 Wins! ***";
+						documentation.Quit();
 						break;
 					}
 
 				} while (startGame == true);
 
 				//gameBoard.GameBoardDisplay();
-				rematch = this->GameOver();
+				//rematch = this->GameOver();
 			}
 		}
 	} while (rematch == true);
@@ -80,35 +84,37 @@ int GameFunctions::SelectStartingPlayer() {
 	return selectedPlayer;
 };
 
-bool GameFunctions::GameOver() {
-	do
-	{
-		cout << endl
-			<< "\n****Game Over!!****\n\n"
-			<< " 1 - Rematch.\n"
-			<< " 2 - Instructions.\n"
-			<< " 3 - Quit.\n"
-			<< " Enter your choice and press return: "; // Display Options to user
-		cin >> choice; // Collect User Input and compare it to the switch statement.
 
-		switch (choice)
-		{
-		case 1:
-			//code to start the game
-			return true;
-			break;
-		case 2:
-			documentation.Help(); // Display the instructions.
-			break;
-		case 3:
-			cout << "Thanks for playing!\n";
-			documentation.Quit(); // Terminate the program
-			break;
-
-		default:
-			cout << "Not a Valid Choice. \n"  // Input Validation
-				<< "Choose again.\n";         // Error Message
-			break;
-		}
-	} while (choice != 3); //Restart the loop and display the menu to the user.
-};
+//bool GameFunctions::GameOver() {
+//	do
+//	{
+//		cout << endl
+//			<< "\n****Game Over!!****\n\n"
+//			<< " 1 - Rematch.\n"
+//			<< " 2 - Instructions.\n"
+//			<< " 3 - Quit.\n"
+//			<< " Enter your choice and press return: "; // Display Options to user
+//		cin >> choice; // Collect User Input and compare it to the switch statement.
+//
+//		switch (choice)
+//		{
+//		case 1:
+//			//code to start the game
+//			gameBoard.GameBoardInit();
+//			return true;
+//			break;
+//		case 2:
+//			documentation.Help(); // Display the instructions.
+//			break;
+//		case 3:
+//			cout << "Thanks for playing!\n";
+//			documentation.Quit(); // Terminate the program
+//			break;
+//
+//		default:
+//			cout << "Not a Valid Choice. \n"  // Input Validation
+//				<< "Choose again.\n";         // Error Message
+//			break;
+//		}
+//	} while (choice != 3); //Restart the loop and display the menu to the user.
+//};

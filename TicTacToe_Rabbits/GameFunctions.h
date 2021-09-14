@@ -12,9 +12,9 @@ class GameFunctions {
 private:
 
 public:
-	char player1Symbol = 'x';
+	char player1Symbol = 'X';
 	int player1Choice;
-	char player2Symbol = 'o';
+	char player2Symbol = 'O';
 	int player2Choice;
 	Documentation documentation;
 	GameBoard gameBoard;
@@ -27,6 +27,6 @@ public:
 
 	void StartGame(bool startGame);
 	int SelectStartingPlayer();
-	bool GameOver();
+	//bool GameOver();
 };
 #endif
