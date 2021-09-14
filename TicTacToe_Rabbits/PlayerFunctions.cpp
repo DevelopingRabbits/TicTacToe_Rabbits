@@ -1,8 +1,13 @@
 #include "PlayerFunctions.h"
-#include "GameBoard.h"
 #include <iostream>
 
 
+
+void PlayerFunctions::playerFunctionsInit() {
+	for (int i = 0; i <= 9; i++) {
+		gameBoardArray[i] = ' ';
+	}
+};
 int PlayerFunctions::Player1Turn() {
 	bool valid = false;
 	loop:
@@ -25,13 +30,20 @@ int PlayerFunctions::Player1Turn() {
 		}
 	} while (!valid);
 
-	if (player1ChoiceTemp < 0 || player1ChoiceTemp > 10)//test to see if the input that has been validated to be a number is either 1 or 2
+	if (player1ChoiceTemp <= 0 || player1ChoiceTemp >= 10)//test to see if the input that has been validated to be a number is either 1 or 2
 	{
+		cout << "** Choice out of number range. Select a number between 1 & 9. **" << endl;
 		goto loop;//if the number is not 1 or 2, go back to attempting to get an input
 	}
+	else if (gameBoardArray[player1ChoiceTemp - 1] == 'x' || gameBoardArray[player1ChoiceTemp - 1] == 'o')
+		{
+			cout << "** Space Occupied! Choose a different option **" << endl;
+			goto loop;//if the number is not 1 or 2, go back to attempting to get an input
+		}
 	else
 	{
 		player1ChoiceTemp -= 1;
+		gameBoardArray[player1ChoiceTemp] = 'x';
 		player1Choice[player1TurnCount] = player1ChoiceTemp;
 		player1TurnCount++;
 		return player1Choice[player1TurnCount - 1];
@@ -61,13 +73,20 @@ loop:
 		}
 	} while (!valid);
 
-	if (player2ChoiceTemp < 0 || player2ChoiceTemp > 10)//test to see if the input that has been validated to be a number is either 1 or 2
+	if (player2ChoiceTemp <= 0 || player2ChoiceTemp >= 10)//test to see if the input that has been validated to be a number is either 1 or 2
 	{
+		cout << "Invalid Input..." << endl;
+		goto loop;//if the number is not 1 or 2, go back to attempting to get an input
+	}
+	else if (gameBoardArray[player2ChoiceTemp - 1] == 'x' || gameBoardArray[player2ChoiceTemp - 1] == 'o')
+	{
+		cout << "** Space Occupied! Choose a different option **" << endl;
 		goto loop;//if the number is not 1 or 2, go back to attempting to get an input
 	}
 	else
 	{
 		player2ChoiceTemp -= 1;
+		gameBoardArray[player2ChoiceTemp] = 'o';
 		player2Choice[player2TurnCount] = player2ChoiceTemp;
 		player2TurnCount++;
 		return player2Choice[player2TurnCount - 1];
