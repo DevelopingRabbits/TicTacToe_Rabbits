@@ -1,6 +1,9 @@
 #include "Documentation.h"
+#include "GameFunctions.h"
 #include <iostream>
 
+GameFunctions gameFunctions
+;
 // Defining functions created in the .h file
 Documentation::Documentation()
 {
@@ -32,6 +35,7 @@ void Documentation::MainMenu() {
 		{
 		case 1:
 			//code to start the game
+			gameFunctions.StartGame();
 			break;
 		case 2:
 			Help(); // Display the instructions.
