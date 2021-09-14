@@ -19,7 +19,7 @@ void GameFunctions::StartGame(bool startGame) {
 			// If Player 1 is randomly selected to go first:
 			if (startingPlayer == 1)
 			{
-				cout << "Starting player is Player 1";
+				cout << "Starting player is Player 1 (X)";
 				gameBoard.GameBoardDisplay(); // Display the gameboard to the user.
 				do {                          // Do while there is no winner.
 					player1Choice = playerFunctions.Player1Turn(); // Allow player 1 to make a selection.
@@ -55,7 +55,7 @@ void GameFunctions::StartGame(bool startGame) {
 			// If Player 2 is randomly selected to go first: 
 			// *********************Same steps as above but in the opposite order.*********************************
 			else {
-				cout << "Starting player is Player 2";
+				cout << "Starting player is Player 2 (O)";
 				gameBoard.GameBoardDisplay();
 				do {
 					player2Choice = playerFunctions.Player2Turn();

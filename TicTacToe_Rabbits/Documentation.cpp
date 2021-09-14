@@ -16,12 +16,33 @@ bool Documentation::MainMenu() {
 	*/
 	do 
 	{
-		cout << endl   
+		cout << endl
 			<< " 1 - Start the game.\n"
 			<< " 2 - Instructions.\n"
-			<< " 3 - Quit.\n"
-			<< " Enter your choice and press return: "; // Display Options to user
-		cin >> choice; // Collect User Input and compare it to the switch statement.
+			<< " 3 - Quit.\n";
+			
+		
+		bool valid = false;
+	
+		do {
+			cout << " Enter your choice and press return: "; // Display Options to user
+			cin >> choice; // Collect User Input and compare it to the switch statement.
+
+			if (cin.good())
+			{
+				//the input is a valid integer, break out of the loop.
+				valid = true;
+			}
+			else
+			{
+				cin.clear(); //reset the buffer
+
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');//empty the buffer
+				cout << "Invalid Input..." << endl;
+			}
+		} while (!valid);
+
+		
 
 		switch (choice)
 		{

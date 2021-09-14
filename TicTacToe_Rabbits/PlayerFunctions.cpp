@@ -27,7 +27,7 @@ int PlayerFunctions::Player1Turn() {
 	loop:
 	do {
 
-		std::cout << "\nPlayer 1 Make your move: ";
+		std::cout << "\nPlayer 1 (X) Make your move: ";
 		std::cin >> player1ChoiceTemp;
 
 		if (cin.good())
@@ -74,7 +74,7 @@ int PlayerFunctions::Player2Turn() {
 loop:
 	do {
 
-		std::cout << "\nPlayer 2 Make your move: ";
+		std::cout << "\nPlayer 2 (O) Make your move: ";
 		std::cin >> player2ChoiceTemp;
 
 		if (cin.good())
