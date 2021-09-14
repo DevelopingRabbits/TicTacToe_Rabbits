@@ -16,7 +16,7 @@ public:
 
 	// Functions
 	Documentation();//default contructor
-	void MainMenu();
+	bool MainMenu();
 	void Welcome();
 	void Help();
 	int Quit();

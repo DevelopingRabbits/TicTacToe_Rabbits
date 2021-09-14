@@ -7,7 +7,7 @@ Documentation::Documentation()
 
 }
 
-void Documentation::MainMenu() {
+bool Documentation::MainMenu() {
 	// int choice is declared in Header File.
 
 	cout << "************** TIC TAC TOE **************\n" << endl;
@@ -32,6 +32,7 @@ void Documentation::MainMenu() {
 		{
 		case 1:
 			//code to start the game
+			return true;
 			break;
 		case 2:
 			Help(); // Display the instructions.
