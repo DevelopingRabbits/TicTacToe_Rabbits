@@ -114,14 +114,19 @@ loop:
 
 int PlayerFunctions::CheckWin()
 {
-	for (int i = 0; i < 8; i++) {
-		cout <<this-> player1Tracker[i] << endl;
-	}
-	cout << endl;
+	// DEBUGGING PURPOSES
+	//for (int i = 0; i < 8; i++) {
+	//	cout <<this-> player1Tracker[i] << endl;
+	//}
+	//cout << endl;
 
-	for (int i = 0; i < 8; i++) {
-		cout << this-> player2Tracker[i] << endl;
-	}
+	//for (int i = 0; i < 8; i++) {
+	//	cout << this-> player2Tracker[i] << endl;
+	//}
+	// DEBUGGING PURPOSES
+
+
+
 	//check for winners on rows
 	for (int i = 0; i < 9; i +=3)
 	{

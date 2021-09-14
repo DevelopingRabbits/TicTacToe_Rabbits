@@ -14,6 +14,7 @@ void GameFunctions::StartGame(bool startGame) {
 			if (startingPlayer == 1)
 			{
 				cout << "Starting player is Player 1";
+				gameBoard.GameBoardDisplay();
 				do {
 					player1Choice = playerFunctions.Player1Turn();
 					gameBoard.GameBoardUpdate(player1Symbol, player1Choice);
@@ -21,7 +22,8 @@ void GameFunctions::StartGame(bool startGame) {
 					int win=playerFunctions.CheckWin();
 					if (win == 1)
 					{
-						cout << "player 1 win";
+						cout << "*** Player 1 Wins! ***";
+						break;
 					}
 
 					player2Choice = playerFunctions.Player2Turn();
@@ -30,7 +32,8 @@ void GameFunctions::StartGame(bool startGame) {
 					win = playerFunctions.CheckWin();
 					if (win == 2)
 					{
-						cout << "player 2 win";
+						cout << "*** Player 2 Wins! ***";
+						break;
 					}
 
 				} while (startGame == true);
@@ -40,6 +43,7 @@ void GameFunctions::StartGame(bool startGame) {
 			}
 			else {
 				cout << "Starting player is Player 2";
+				gameBoard.GameBoardDisplay();
 				do {
 					player2Choice = playerFunctions.Player2Turn();
 					gameBoard.GameBoardUpdate(player2Symbol, player2Choice);
@@ -47,7 +51,8 @@ void GameFunctions::StartGame(bool startGame) {
 					int win = playerFunctions.CheckWin();
 					if (win == 2)
 					{
-						cout << "player 2 win";
+						cout << "*** Player 2 Wins! ***";
+						break;
 					}
 
 					player1Choice = playerFunctions.Player1Turn();
@@ -56,7 +61,8 @@ void GameFunctions::StartGame(bool startGame) {
 					win = playerFunctions.CheckWin();
 					if (win == 1)
 					{
-						cout << "player 1 win";
+						cout << "*** Player 1 Wins! ***";
+						break;
 					}
 
 				} while (startGame == true);

@@ -60,8 +60,9 @@ void Documentation::Welcome() {
 
 void Documentation::Help() {
 	//explain how turns will be made (example: spaces on the grid are represnted by numbers 1 to 9)
+	std::cout << "\n************************************************** INSTRUCTIONS START **************************************************\n";
 	std::cout << "This is a two player game. Player 1 is 'X' and Player 2 is 'O'\n";
-	std::cout << "In order to select a spot on the board, input a number 1-9 to corraspond to the spaces on the board: " << std::endl;
+	std::cout << "In order to select a spot on the board, input a number 1-9 to correspond to the spaces on the board: " << std::endl;
 	
 	int gameBoardArrayHelp[9];
 	
@@ -107,9 +108,8 @@ void Documentation::Help() {
 			cout << " | ";//print out the third two bars in the tictactoe game board
 		}
 	}
-
+	std::cout << "\n************************************************** INSTRUCTIONS END **************************************************\n";
 	std::cout << std::endl;
-	return;
 };
 
 /// <summary>
