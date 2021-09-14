@@ -9,7 +9,7 @@ using namespace std;
 class GameFunctions {
 
 private:
-
+	int playerChoice;//stores the value for which player goes first
 public:
 	Documentation documentation;
 	int startingPlayer;
@@ -20,6 +20,9 @@ public:
 	void StartGame(bool startGame);
 	int SelectStartingPlayer();
 	bool GameOver();
+	void StartGame();
+	int SelectStartingPlayer();
+	void GameOver();
 
 };
 

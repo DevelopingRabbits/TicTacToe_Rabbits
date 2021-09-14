@@ -1,6 +1,9 @@
 #include "Documentation.h"
+#include "GameFunctions.h"
 #include <iostream>
 
+GameFunctions gameFunctions
+;
 // Defining functions created in the .h file
 Documentation::Documentation()
 {
