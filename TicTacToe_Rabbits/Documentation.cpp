@@ -48,17 +48,25 @@ bool Documentation::MainMenu() {
 		{
 		case 1:
 			//code to start the game
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
 			return true;
 			break;
 		case 2:
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
 			Help(); // Display the instructions.
 			break;
 		case 3:
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
 			cout << "Thanks for playing!\n";
 			Quit(); // Terminate the program
 			break;
 
 		default:
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
 			cout << "Not a Valid Choice. \n"  // Input Validation
 				<< "Choose again.\n";         // Error Message
 			break;

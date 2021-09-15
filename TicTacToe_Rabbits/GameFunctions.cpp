@@ -25,13 +25,22 @@ void GameFunctions::StartGame(bool startGame) {
 					player1Choice = playerFunctions.Player1Turn(); // Allow player 1 to make a selection.
 					gameBoard.GameBoardUpdate(player1Symbol, player1Choice); //Selection is made, update the board to the corresponding square.
 					gameBoard.GameBoardDisplay(); //Display the board with the new move.
-					int win=playerFunctions.CheckWin(); //Check if Player 1 won.
+					turnCounter++;
+					win=playerFunctions.CheckWin(); //Check if Player 1 won.
 					if (win == 1)
 					{
 						cout << "*** Player 1 Wins! ***";
 						documentation.Quit(); // Winner detected, quit game. Rematch will be implemented at a later time.
 						break;
 					}
+					win = playerFunctions.CheckTie(turnCounter);
+					if (win == 3)
+					{
+						cout << "*** It's A Tie! ***";
+						documentation.Quit(); // Winner detected, quit game. Rematch will be implemented at a later time.
+						break;
+					}
+
 
 
 					//Repeat the same steps above for Player 2
@@ -39,9 +48,17 @@ void GameFunctions::StartGame(bool startGame) {
 					gameBoard.GameBoardUpdate(player2Symbol, player2Choice); //Selection is made, update the board to the corresponding square.
 					gameBoard.GameBoardDisplay(); // Display the gameboard to the user.
 					win = playerFunctions.CheckWin();//Check if Player 2 won.
+					turnCounter++;
 					if (win == 2)
 					{
 						cout << "*** Player 2 Wins! ***";
+						documentation.Quit(); // Winner detected, quit game. Rematch will be implemented at a later time.
+						break;
+					}
+					win = playerFunctions.CheckTie(turnCounter);
+					if (win == 3)
+					{
+						cout << "*** It's A Tie! ***";
 						documentation.Quit(); // Winner detected, quit game. Rematch will be implemented at a later time.
 						break;
 					}
@@ -61,11 +78,19 @@ void GameFunctions::StartGame(bool startGame) {
 					player2Choice = playerFunctions.Player2Turn();
 					gameBoard.GameBoardUpdate(player2Symbol, player2Choice);
 					gameBoard.GameBoardDisplay();
-					int win = playerFunctions.CheckWin();
+					win = playerFunctions.CheckWin();
+					turnCounter++;
 					if (win == 2)
 					{
 						cout << "*** Player 2 Wins! ***";
 						documentation.Quit();
+						break;
+					}
+					win = playerFunctions.CheckTie(turnCounter);
+					if (win == 3)
+					{
+						cout << "*** It's A Tie! ***";
+						documentation.Quit(); // Winner detected, quit game. Rematch will be implemented at a later time.
 						break;
 					}
 
@@ -73,10 +98,18 @@ void GameFunctions::StartGame(bool startGame) {
 					gameBoard.GameBoardUpdate(player1Symbol, player1Choice);
 					gameBoard.GameBoardDisplay();
 					win = playerFunctions.CheckWin();
+					turnCounter++;
 					if (win == 1)
 					{
 						cout << "*** Player 1 Wins! ***";
 						documentation.Quit();
+						break;
+					}
+					win = playerFunctions.CheckTie(turnCounter);
+					if (win == 3)
+					{
+						cout << "*** It's A Tie! ***";
+						documentation.Quit(); // Winner detected, quit game. Rematch will be implemented at a later time.
 						break;
 					}
 

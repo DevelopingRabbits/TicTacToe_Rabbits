@@ -22,8 +22,9 @@ public:
 
 	bool rematch;
 	int startingPlayer;
-	int turnCounter;
+	int turnCounter = 0;
 	int choice;
+	int win;
 
 	void StartGame(bool startGame); //Main Function that calls functions from various classes to make the game function.
 	int SelectStartingPlayer();     //A function that randomly selects either 1 or 2 to determine the starting player.
