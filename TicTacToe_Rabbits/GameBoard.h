@@ -16,6 +16,5 @@ public:
 	void GameBoardDisplay();                           // Display the GameBoard to the user.
 	void GameBoardUpdate(char input,int space);        // Add X's and O's to the gameboard as the game progresses.
 	void GameBoardReset();                             // Resets the GameBoard as needed.
-	//function that prompts players to make a move
 };
 #endif

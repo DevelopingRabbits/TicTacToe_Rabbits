@@ -5,7 +5,7 @@
 bool Documentation::MainMenu() {
 	// int choice is declared in Header File.
 
-	cout << "************** TIC TAC TOE **************\n" << endl;
+	cout << "************** LIGHTS OUT **************\n" << endl;
 	cout << "**************  Main Menu **************\n\n" << endl;
 
 	/* Do While Loop that displays options to the user.
@@ -79,7 +79,7 @@ bool Documentation::MainMenu() {
 /// </summary>
 
 void Documentation::Welcome() {
-	cout << "Welcome to the game of TicTacToe.\n";
+	cout << "Welcome to the game of Lights Out.\n";
 	cout << "This game was developed by Developing Rabbits.\n\n";
 };
 
@@ -90,8 +90,8 @@ void Documentation::Welcome() {
 void Documentation::Help() {
 	//explain how turns will be made (example: spaces on the grid are represnted by numbers 1 to 9)
 	std::cout << "\n************************************************** INSTRUCTIONS START **************************************************\n";
-	std::cout << "This is a two player game. Player 1 is 'X' and Player 2 is 'O'\n";
-	std::cout << "In order to select a spot on the board, input a number 1-9 to correspond to the spaces on the board: " << std::endl;
+	std::cout << "This is a simple game where the objective is to fill the board.\n";
+	std::cout << "Select a button and it will flip the lights on that area and all that neighbor it. " << std::endl;
 	
 	int gameBoardArrayHelp[9];
 	
@@ -102,10 +102,10 @@ void Documentation::Help() {
 
 	cout << "\n\n";
 	std::cout << "   ";
-	for (int x = 0; x < 3; x++)//display the first row of the tictactoe gameboard
+	for (int x = 0; x < 3; x++)//display the first row of the gameboard
 	{
 		std::cout << gameBoardArrayHelp[x];
-		if (x < 2)//print out the first two bars in the tictactoe game board
+		if (x < 2)//print out the first two bars in the game board
 		{
 			cout << " | ";
 		}
@@ -116,10 +116,10 @@ void Documentation::Help() {
 	std::cout << "  ";
 	std::cout << "------------" << std::endl;
 	std::cout << "   ";
-	for (int x = 3; x < 6; x++)//display the second row of the tictactoe gameboard
+	for (int x = 3; x < 6; x++)//display the second row of the gameboard
 	{
 		std::cout << gameBoardArrayHelp[x];
-		if (x < 5)//print out the second two bars in the tictactoe game board
+		if (x < 5)//print out the second two bars in the game board
 		{
 			cout << " | ";
 		}
@@ -129,12 +129,12 @@ void Documentation::Help() {
 	std::cout << "  ";
 	std::cout << "------------" << std::endl;
 	std::cout << "   ";
-	for (int x = 6; x < 9; x++)//display the third row of the tictactoe gameboard
+	for (int x = 6; x < 9; x++)//display the third row of the gameboard
 	{
 		std::cout << gameBoardArrayHelp[x];
 		if (x < 8)
 		{
-			cout << " | ";//print out the third two bars in the tictactoe game board
+			cout << " | ";//print out the third two bars in the game board
 		}
 	}
 	std::cout << "\n************************************************** INSTRUCTIONS END **************************************************\n";

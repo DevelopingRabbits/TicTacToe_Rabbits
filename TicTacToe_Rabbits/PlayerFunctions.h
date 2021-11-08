@@ -16,22 +16,16 @@ public:
 	int player1Choice[9];
 	int player1ChoiceTemp;
 	int player1TurnCount = 0;
-	int player2Choice[9];
-	int player2TurnCount = 0;
-	int player2ChoiceTemp;
 	char gameBoardArray[9];
 	const int MAX_TURN = 9;
 
 
 	int player1Tracker[9];
-	int player2Tracker[9];
 
 
 	void playerFunctionsInit();  // Resets all the variables. Will be used for rematches.
 	int Player1Turn();           // All input validation and steps for Player 1's turn
-	int Player2Turn();           // All input validation and steps for Player 2's turn
 	int CheckWin();              // Check if a player has a winning move.
-	int CheckTie(int playerCount);
 };
 #endif
 
